@@ -22,7 +22,8 @@ CHECKS=(
     ./todo-security.sh \
     ./no-localhost-guard.sh \
     ./bash-syntax.sh \
-    ./check-owners.sh
+    ./check-owners.sh \
+    ./licenses.sh
 )
 
 echo "--- 🚨 Buildkite's timing information is misleading! Only consider the job timing that's printed after 'done'"
