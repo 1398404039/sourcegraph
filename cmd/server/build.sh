@@ -84,6 +84,9 @@ echo "--- grafana config"
 cp -r docker-images/grafana/config "$OUTPUT/sg_config_grafana"
 cp -r dev/grafana/linux "$OUTPUT/sg_config_grafana/provisioning/datasources"
 
+echo "--- jaeger-all-in-one binary"
+cmd/server/jaeger.sh
+
 echo "--- docker build"
 docker build -f cmd/server/Dockerfile -t "$IMAGE" "$OUTPUT" \
     --progress=plain \
